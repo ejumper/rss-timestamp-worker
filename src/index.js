@@ -407,7 +407,6 @@ export default {
           'Access-Control-Allow-Origin': '*',
           'X-Feed-Source': feedConfig.url,
           'X-Feed-Processed': new Date().toISOString(),
-          // Add a unique header to verify fresh responses
           'X-Response-Time': Date.now().toString()
         }
       });
