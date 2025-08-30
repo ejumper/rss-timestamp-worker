@@ -1,0 +1,7 @@
+name = "rss-timestamp-adder"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "RSS_TIMESTAMP_CACHE"
+id = "343bd55e05214bab892fe1c6b590c9df"
