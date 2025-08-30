@@ -350,6 +350,8 @@ const DEFAULT_CONFIG = {
   kvTTL: 604800 // 7 days
 };
 
+// Add this at the very top of your index.js, replacing just the fetch function
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -388,14 +390,8 @@ export default {
     }
     
     try {
-      // Try to get from cache first
-      const cache = caches.default;
-      const cacheKey = new Request(url.toString(), request);
-      const cachedResponse = await cache.match(cacheKey);
-      
-      if (cachedResponse) {
-        return cachedResponse;
-      }
+      // REMOVED CACHE CHECK - Go directly to processing
+      // This ensures fresh data on every request while KV handles item persistence
       
       // Fetch and process the feed
       const processedFeed = await processFeed(feedConfig, env);
@@ -404,15 +400,19 @@ export default {
       const response = new Response(processedFeed, {
         headers: {
           'Content-Type': 'application/rss+xml; charset=utf-8',
-          'Cache-Control': `public, max-age=${feedConfig.cacheDuration}`,
+          // Important: Tell Cloudflare AND browsers not to cache
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
           'Access-Control-Allow-Origin': '*',
           'X-Feed-Source': feedConfig.url,
-          'X-Feed-Processed': new Date().toISOString()
+          'X-Feed-Processed': new Date().toISOString(),
+          // Add a unique header to verify fresh responses
+          'X-Response-Time': Date.now().toString()
         }
       });
       
-      // Store in cache
-      ctx.waitUntil(cache.put(cacheKey, response.clone()));
+      // REMOVED ctx.waitUntil cache.put - No edge caching
       
       return response;
     } catch (error) {
