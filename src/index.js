@@ -11,11 +11,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'springflingqueens': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=springflingqueens&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'djcapslock0': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=djcapslock0&format=Atom',
     cacheDuration: 300,
@@ -26,18 +21,8 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'leethomastv': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=leethomastv&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'bahamas10': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=bahamas10_&format=Mrss',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'ryancadby': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=ryancadby&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -61,11 +46,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'mysterymanon': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=mysterymanon&format=Mrss',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'brynodc': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=brynodc&format=Atom',
     cacheDuration: 300,
@@ -73,16 +53,6 @@ const FEED_CONFIGS = {
   },
   'longmirelp': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=longmirelp&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'knowyourmeme': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=knowyourmeme&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  '404media': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=404.media&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -106,33 +76,13 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'johnjacobscc': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=johnjacobscc&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'culturework': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=culturework&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'iamjustvic': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=iamjustvic&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'nwyyvksuqk': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=nwyyvksuqk&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'nyecanread': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=nyecanread&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'madisoncanread': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=madisoncanread&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -151,11 +101,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'wesbos': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=wesbos&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'cybelecanterel': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=cybelecanterel&format=Atom',
     cacheDuration: 300,
@@ -163,21 +108,6 @@ const FEED_CONFIGS = {
   },
   'cjsaitoolbox': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=cjs.ai.toolbox&format=Mrss',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'treaclychild': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=treaclychild&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'itsfuwaria': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=itsfuwaria&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'taylorlorenz': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=taylorlorenz&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -256,11 +186,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'jasonkpargin': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=jasonkpargin&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'zigurdmednieks': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=zigurdmednieks&format=Atom',
     cacheDuration: 300,
@@ -301,11 +226,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'thegoodliars': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=thegoodliars&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'economyheather': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=economy_heather&format=Atom',
     cacheDuration: 300,
@@ -331,8 +251,8 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'matteolane': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=matteolane&format=Atom',
+  'mayor_wren': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=mayor_wren&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
