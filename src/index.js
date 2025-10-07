@@ -12,32 +12,32 @@ const FEED_CONFIGS = {
     defaultAge: 3600
   },
   'vibestvita': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=vibesestvida&format=Atom'
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=vibesestvida&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
   'aliencovenantnaildesigns': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=aliencovenantnaildesigns&format=Atom'
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=aliencovenantnaildesigns&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
   'cjtrowbridge': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=cjtrowbridge&format=Atom'
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=cjtrowbridge&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
   'alexianadfry': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=alexianadfry&format=Atom'
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=alexianadfry&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
   'vulnerable_matt': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=vulnerable_matt&format=Atom'
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=vulnerable_matt&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
   'chiara.codes': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=chiara.codes&format=Atom'
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=chiara.codes&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -47,7 +47,7 @@ const FEED_CONFIGS = {
     defaultAge: 3600
   },
   'mlgonzo': {
-  url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=mlgonzo1&format=Atom'
+  url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=mlgonzo1&format=Atom',
   cacheDuration: 300,
     defaultAge: 3600
   },
