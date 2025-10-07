@@ -16,7 +16,7 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'vibestvita': {
+  'aliencovenantnaildesigns': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=aliencovenantnaildesigns&format=Atom'
     cacheDuration: 300,
     defaultAge: 3600
@@ -26,12 +26,7 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  '40vibesestvida': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=%40vibesestvida&format=Atom'
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-   'alexianadfry': {
+  'alexianadfry': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=alexianadfry&format=Atom'
     cacheDuration: 300,
     defaultAge: 3600
@@ -198,11 +193,6 @@ const FEED_CONFIGS = {
   },
   'natalieontv': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=natalieontv&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'mayor_wren': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=mayor_wren&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
