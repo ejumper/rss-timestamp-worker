@@ -21,6 +21,11 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+   'theharlemhistorian': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=theharlemhistorian&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
   'aliencovenantnaildesigns': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=aliencovenantnaildesigns&format=Atom',
     cacheDuration: 300,
