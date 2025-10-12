@@ -21,8 +21,13 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'rebmasel': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=rebmasel&format=Atom',
+    'abaetol': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=abaetol&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'trademoviespodcast': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=trademoviespodcast&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
