@@ -16,6 +16,11 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+  'vibestvita': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=itsfuwaria&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
   'abaetol': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=abaetol&format=Atom',
     cacheDuration: 300,
