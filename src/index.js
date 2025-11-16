@@ -408,7 +408,8 @@ async function processRssFeed(xmlString, config, env) {
     if (linkMatch) {
       const embedUrl = convertToTikTokPlayerUrl(linkMatch[1].trim());
       if (embedUrl) {
-        const updatedLink = linkMatch[0].replace(linkMatch[1], embedUrl);
+        const escapedUrl = escapeXmlText(embedUrl);
+        const updatedLink = linkMatch[0].replace(linkMatch[1], escapedUrl);
         fullItem = fullItem.replace(linkMatch[0], updatedLink);
       }
     }
@@ -417,7 +418,8 @@ async function processRssFeed(xmlString, config, env) {
     if (guidMatch) {
       const embedUrl = convertToTikTokPlayerUrl(guidMatch[1].trim());
       if (embedUrl) {
-        const updatedGuid = guidMatch[0].replace(guidMatch[1], embedUrl);
+        const escapedUrl = escapeXmlText(embedUrl);
+        const updatedGuid = guidMatch[0].replace(guidMatch[1], escapedUrl);
         fullItem = fullItem.replace(guidMatch[0], updatedGuid);
       }
     }
@@ -476,7 +478,8 @@ async function processAtomFeed(xmlString, config, env) {
     if (linkMatch) {
       const embedUrl = convertToTikTokPlayerUrl(linkMatch[1].trim());
       if (embedUrl) {
-        const updatedLink = linkMatch[0].replace(linkMatch[1], embedUrl);
+        const escapedUrl = escapeXmlAttribute(embedUrl);
+        const updatedLink = linkMatch[0].replace(linkMatch[1], escapedUrl);
         fullEntry = fullEntry.replace(linkMatch[0], updatedLink);
       }
     }
@@ -485,7 +488,8 @@ async function processAtomFeed(xmlString, config, env) {
     if (idMatch) {
       const embedUrl = convertToTikTokPlayerUrl(idMatch[1].trim());
       if (embedUrl) {
-        const updatedId = idMatch[0].replace(idMatch[1], embedUrl);
+        const escapedUrl = escapeXmlText(embedUrl);
+        const updatedId = idMatch[0].replace(idMatch[1], escapedUrl);
         fullEntry = fullEntry.replace(idMatch[0], updatedId);
       }
     }
@@ -652,6 +656,13 @@ function escapeXmlAttribute(value) {
   return value
     .replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function escapeXmlText(value) {
+  return value
+    .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 }
