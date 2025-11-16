@@ -26,11 +26,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-    'abaetol': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=abaetol&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'trademoviespodcast': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=trademoviespodcast&format=Atom',
     cacheDuration: 300,
@@ -76,8 +71,8 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'chiara.codes': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=chiara.codes&format=Atom',
+  'cocos.code': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=cocos.code&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -151,8 +146,8 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'caitlynandcharlee': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=caitlynandcharlee&format=Atom',
+  'dearmilkfed': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=dearmilkfed&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
