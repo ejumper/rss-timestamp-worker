@@ -412,6 +412,15 @@ async function processRssFeed(xmlString, config, env) {
       }
     }
 
+    const guidMatch = itemContent.match(/<guid\b[^>]*>([\s\S]*?)<\/guid>/i);
+    if (guidMatch) {
+      const embedUrl = convertToTikTokPlayerUrl(guidMatch[1].trim());
+      if (embedUrl) {
+        const updatedGuid = guidMatch[0].replace(guidMatch[1], embedUrl);
+        fullItem = fullItem.replace(guidMatch[0], updatedGuid);
+      }
+    }
+
     if (!hasPubDate) {
       let timestamp;
       const knownItem = knownItems.get(itemId);
@@ -468,6 +477,15 @@ async function processAtomFeed(xmlString, config, env) {
       if (embedUrl) {
         const updatedLink = linkMatch[0].replace(linkMatch[1], embedUrl);
         fullEntry = fullEntry.replace(linkMatch[0], updatedLink);
+      }
+    }
+
+    const idMatch = entryContent.match(/<id\b[^>]*>([\s\S]*?)<\/id>/i);
+    if (idMatch) {
+      const embedUrl = convertToTikTokPlayerUrl(idMatch[1].trim());
+      if (embedUrl) {
+        const updatedId = idMatch[0].replace(idMatch[1], embedUrl);
+        fullEntry = fullEntry.replace(idMatch[0], updatedId);
       }
     }
 
