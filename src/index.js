@@ -42,7 +42,7 @@ const FEED_CONFIGS = {
     defaultAge: 3600
   },
   'econchrisclarke': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=econchrisclarke=Atom',
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=econchrisclarke&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -231,7 +231,7 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
- 'ConnerOmalley': {
+ 'conner_omalley_': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=conner_omalley_&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
@@ -243,9 +243,9 @@ const DEFAULT_CONFIG = {
   cacheDuration: 300, // Not used currently, but kept for future use
   defaultAge: 3600,   // Not used currently, but kept for future use
   kvTTL: 604800,      // 7 days for timestamp data
-  sourceCacheTTL: 86400, // Base 24 hours for RSS source data
-  sourceCacheTTLMin: 22 * 3600, // Minimum: 22 hours 
-  sourceCacheTTLMax: 26 * 3600  // Maximum: 26 hours
+  sourceCacheTTL: 6 * 3600, // Base 6 hours for RSS source data
+  sourceCacheTTLMin: 6 * 3600, // Minimum: 6 hours
+  sourceCacheTTLMax: 6 * 3600  // Maximum: 6 hours
 };
 
 // Add this at the very top of your index.js, replacing just the fetch function
@@ -310,7 +310,7 @@ export default {
   }
 };
 
-// MODIFIED: This is the key function that now implements 24-hour caching
+// MODIFIED: This is the key function that now implements 6-hour caching
 async function processFeed(config, env) {
   // Check for cached source feed first
   const sourceCacheKey = `source_${config.cacheKey}`;
@@ -341,7 +341,7 @@ async function processFeed(config, env) {
     
     const response = await fetch(config.url, {
       headers: {
-        'User-Agent': 'RSS-Timestamp-Worker/1.0 (Polite 24h cache)'
+        'User-Agent': 'RSS-Timestamp-Worker/1.0 (Polite 6h cache)'
       }
     });
 
@@ -351,10 +351,10 @@ async function processFeed(config, env) {
 
     feedXml = await response.text();
 
-    // Cache the source feed for 22-26 hours (randomized to stagger requests)
+    // Cache the source feed for the configured TTL (6 hours)
     if (env.RSS_TIMESTAMP_CACHE) {
       try {
-        // Generate a random TTL between 22-26 hours to stagger requests
+        // Generate a TTL (min and max are equal for a consistent refresh cadence)
         const randomTTL = Math.floor(
           Math.random() * (config.sourceCacheTTLMax - config.sourceCacheTTLMin) + config.sourceCacheTTLMin
         );
@@ -366,7 +366,7 @@ async function processFeed(config, env) {
         }), {
           expirationTtl: randomTTL
         });
-        console.log(`Cached RSS source for ${config.cacheKey} for ${hoursFromNow} hours (randomized)`);
+        console.log(`Cached RSS source for ${config.cacheKey} for ${hoursFromNow} hours`);
       } catch (error) {
         console.error('Error caching source feed:', error);
       }
