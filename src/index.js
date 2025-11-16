@@ -403,6 +403,15 @@ async function processRssFeed(xmlString, config, env) {
     const itemId = extractItemId(itemContent);
     const hasPubDate = /<pubDate\b[^>]*>[\s\S]*?<\/pubDate>/i.test(itemContent);
 
+    const linkMatch = itemContent.match(/<link\b[^>]*>([\s\S]*?)<\/link>/i);
+    if (linkMatch) {
+      const embedUrl = convertToTikTokPlayerUrl(linkMatch[1].trim());
+      if (embedUrl) {
+        const updatedLink = linkMatch[0].replace(linkMatch[1], embedUrl);
+        fullItem = fullItem.replace(linkMatch[0], updatedLink);
+      }
+    }
+
     if (!hasPubDate) {
       let timestamp;
       const knownItem = knownItems.get(itemId);
@@ -452,6 +461,15 @@ async function processAtomFeed(xmlString, config, env) {
   modifiedXml = modifiedXml.replace(entryRegex, (fullEntry, entryContent) => {
     const itemId = extractAtomItemId(entryContent);
     const hasTimestamp = /<(published|updated)\b[^>]*>[\s\S]*?<\/(published|updated)>/i.test(entryContent);
+
+    const linkMatch = entryContent.match(/<link\b[^>]*href=["']([^"']+)["'][^>]*>/i);
+    if (linkMatch) {
+      const embedUrl = convertToTikTokPlayerUrl(linkMatch[1].trim());
+      if (embedUrl) {
+        const updatedLink = linkMatch[0].replace(linkMatch[1], embedUrl);
+        fullEntry = fullEntry.replace(linkMatch[0], updatedLink);
+      }
+    }
 
     if (!hasTimestamp) {
       let timestamp;
@@ -588,4 +606,11 @@ function createErrorResponse(message, status = 500) {
       'Access-Control-Allow-Origin': '*'
     }
   });
+}
+
+function convertToTikTokPlayerUrl(url) {
+  if (!url) return null;
+  const match = url.match(/tiktok\.com\/@[^/]+\/video\/([0-9]+)/i);
+  if (!match) return null;
+  return `https://www.tiktok.com/player/v1/${match[1]}?loop=1&controls=1`;
 }
