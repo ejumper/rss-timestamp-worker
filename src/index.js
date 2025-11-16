@@ -636,13 +636,22 @@ function convertToTikTokPlayerUrl(url) {
 
 function rewriteFeedSelfLink(feedXml, selfUrl) {
   if (!feedXml || !selfUrl) return feedXml;
+  const escapedUrl = escapeXmlAttribute(selfUrl);
   const patterns = [
     /(<link\b[^>]*rel=["']self["'][^>]*href=["'])([^"']+)(["'][^>]*>)/i,
     /(<atom:link\b[^>]*rel=["']self["'][^>]*href=["'])([^"']+)(["'][^>]*>)/i
   ];
   let updatedXml = feedXml;
   for (const pattern of patterns) {
-    updatedXml = updatedXml.replace(pattern, `$1${selfUrl}$3`);
+    updatedXml = updatedXml.replace(pattern, `$1${escapedUrl}$3`);
   }
   return updatedXml;
+}
+
+function escapeXmlAttribute(value) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
