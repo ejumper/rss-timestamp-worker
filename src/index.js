@@ -294,7 +294,8 @@ export default {
     
     try {
       const processedFeed = await processFeed(feedConfig, env);
-      const response = new Response(processedFeed, {
+      const rewrittenFeed = rewriteFeedSelfLink(processedFeed, url.toString());
+      const response = new Response(rewrittenFeed, {
         headers: {
           'Content-Type': 'application/rss+xml; charset=utf-8',
           'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -631,4 +632,17 @@ function convertToTikTokPlayerUrl(url) {
   const match = url.match(/tiktok\.com\/@[^/]+\/video\/([0-9]+)/i);
   if (!match) return null;
   return `https://www.tiktok.com/player/v1/${match[1]}?loop=1&controls=1`;
+}
+
+function rewriteFeedSelfLink(feedXml, selfUrl) {
+  if (!feedXml || !selfUrl) return feedXml;
+  const patterns = [
+    /(<link\b[^>]*rel=["']self["'][^>]*href=["'])([^"']+)(["'][^>]*>)/i,
+    /(<atom:link\b[^>]*rel=["']self["'][^>]*href=["'])([^"']+)(["'][^>]*>)/i
+  ];
+  let updatedXml = feedXml;
+  for (const pattern of patterns) {
+    updatedXml = updatedXml.replace(pattern, `$1${selfUrl}$3`);
+  }
+  return updatedXml;
 }
