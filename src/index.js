@@ -241,13 +241,64 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+  //------------------------
   'chelsearonniemurphy': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=chelsearonniemurphy&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'chelsearonniemurphy': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=chelsearonniemurphy&format=Atom',
+  'obscurae': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=obscurae&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'calebwritescode': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=calebwritescode&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'pingping.tech.talk': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=pingping.tech.talk&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'charlixcx': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=charlixcx&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'pinkpantheress': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=pinkpantheress&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'cybersecknight': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=cybersecknight&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'shovel.studio': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=shovel.studio&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'thejakechristie': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=thejakechristie&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'bekahdayyy': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=bekahdayyy&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'vagabondartist': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=vagabondartist&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'arkhamunhinged24': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=arkhamunhinged24&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   }
