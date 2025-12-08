@@ -597,7 +597,13 @@ async function processRssFeed(xmlString, config, env) {
     return fullItem;
   });
 
-  await saveKnownItems(config.cacheKey, newKnownItems, config.kvTTL, env);
+  // Only write to KV if data has changed
+  if (!mapsAreEqual(knownItems, newKnownItems)) {
+    console.log(`RSS feed ${config.cacheKey}: Changes detected, writing to KV (${newKnownItems.size} items)`);
+    await saveKnownItems(config.cacheKey, newKnownItems, config.kvTTL, env);
+  } else {
+    console.log(`RSS feed ${config.cacheKey}: No changes, skipping write (${newKnownItems.size} items)`);
+  }
   return modifiedXml;
 }
 
@@ -667,7 +673,13 @@ async function processAtomFeed(xmlString, config, env) {
     return fullEntry;
   });
 
-  await saveKnownItems(config.cacheKey, newKnownItems, config.kvTTL, env);
+  // Only write to KV if data has changed
+  if (!mapsAreEqual(knownItems, newKnownItems)) {
+    console.log(`Atom feed ${config.cacheKey}: Changes detected, writing to KV (${newKnownItems.size} items)`);
+    await saveKnownItems(config.cacheKey, newKnownItems, config.kvTTL, env);
+  } else {
+    console.log(`Atom feed ${config.cacheKey}: No changes, skipping write (${newKnownItems.size} items)`);
+  }
   return modifiedXml;
 }
 
@@ -734,6 +746,36 @@ async function saveKnownItems(cacheKey, items, ttl, env) {
   } catch (error) {
     console.error('Error saving to KV:', error);
   }
+}
+
+/**
+ * Compares two Maps for equality (keys and values)
+ * @param {Map} map1 - First map to compare
+ * @param {Map} map2 - Second map to compare
+ * @returns {boolean} - True if maps are identical
+ */
+function mapsAreEqual(map1, map2) {
+  // Fast path: check sizes first
+  if (map1.size !== map2.size) {
+    return false;
+  }
+
+  // Deep comparison: check all keys and values
+  for (const [key, value] of map1) {
+    if (!map2.has(key)) {
+      return false;
+    }
+
+    const item1 = value;
+    const item2 = map2.get(key);
+
+    // Compare timestamp and added fields
+    if (item1.timestamp !== item2.timestamp || item1.added !== item2.added) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 function formatRFC822Date(date) {
