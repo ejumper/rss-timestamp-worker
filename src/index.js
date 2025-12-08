@@ -356,8 +356,8 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'tellthebees': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=tellthebees&format=Atom',
+  'tellthebeees': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=tellthebeees&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
