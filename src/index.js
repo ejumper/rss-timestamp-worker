@@ -66,6 +66,11 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+  'slothotho': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=slothotho&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
   'alexianadfry': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=alexianadfry&format=Atom',
     cacheDuration: 300,
