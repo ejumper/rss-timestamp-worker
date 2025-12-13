@@ -16,6 +16,52 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+  'ckwon117spam': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=ckwon117spam&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'anthonyjeselnik': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=anthonyjeselnik&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'bria.stuart': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=bria.stuart&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'zaydupree': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=zaydupree&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'rebmasel': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=rebmasel&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'joshjohnsoncomedy': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=joshjohnsoncomedy&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'springflingqueens': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=springflingqueens&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'adroidirl': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=adroidirl&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'digitalartform': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=digitalartform&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  
   'vibestvita': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=vibesestvida&format=Atom',
     cacheDuration: 300,
