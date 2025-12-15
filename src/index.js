@@ -292,11 +292,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'obscurae': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=obscurae&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'calebwritescode': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=calebwritescode&format=Atom',
     cacheDuration: 300,
