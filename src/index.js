@@ -11,6 +11,16 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+  'willowbinx': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=willowbinx&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'davidbombal': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=davidbombal&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
   'jasonkpargin': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=jasonkpargin&format=Atom',
     cacheDuration: 300,
