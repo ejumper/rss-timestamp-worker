@@ -26,11 +26,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'ckwon117spam': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=ckwon117spam&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'anthonyjeselnik': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=anthonyjeselnik&format=Atom',
     cacheDuration: 300,
@@ -182,11 +177,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'culturework': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=culturework&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'nyecanread': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=nyecanread&format=Atom',
     cacheDuration: 300,
@@ -234,16 +224,6 @@ const FEED_CONFIGS = {
   },
   'thisweekinlinux': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=thisweekinlinux&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'danieltosh': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=danieltosh&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'annicanns': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=annicanns&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   },
@@ -382,11 +362,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'jacob_desio': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=jacob_desio&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'leven_parker': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=leven_parker&format=Atom',
     cacheDuration: 300,
@@ -419,11 +394,6 @@ const FEED_CONFIGS = {
   },
   'katzonearth': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=katzonearth&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
-  'arkhamunhinged24': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=arkhamunhinged24&format=Atom',
     cacheDuration: 300,
     defaultAge: 3600
   }
