@@ -307,11 +307,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'shovel.studio': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=shovel.studio&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'thejakechristie': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=thejakechristie&format=Atom',
     cacheDuration: 300,
