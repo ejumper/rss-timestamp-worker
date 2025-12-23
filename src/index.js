@@ -16,6 +16,16 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
+  'hugeasmammoth.films': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=hugeasmammoth.films&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
+  'karistocracy': {
+    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=karistocracy&format=Atom',
+    cacheDuration: 300,
+    defaultAge: 3600
+  },
   'davidbombal': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=davidbombal&format=Atom',
     cacheDuration: 300,
