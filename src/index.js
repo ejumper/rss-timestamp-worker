@@ -242,11 +242,6 @@ const FEED_CONFIGS = {
     cacheDuration: 300,
     defaultAge: 3600
   },
-  'remodelschool': {
-    url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=remodelschool&format=Atom',
-    cacheDuration: 300,
-    defaultAge: 3600
-  },
   'boxofficeben': {
     url: 'https://rss-bridge.org/bridge01/?action=display&bridge=TikTokBridge&context=By+user&username=boxofficeben&format=Atom',
     cacheDuration: 300,
